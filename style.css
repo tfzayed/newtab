@@ -1,0 +1,61 @@
+:root {
+    --bg: #20222b;
+    --second-bg: #282a36;
+    --text: #f8f8f2;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --hover-shadow: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: "Courier New", monospace;
+    background-color: var(--bg);
+    background-image: url("./images/StreetWallpaper.jpg");
+    background-size: cover;
+    color: var(--text);
+    font-weight: 500;
+    font-size: x-large;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.tile {
+    width: 250px;
+    height: 120px;
+    margin: 10px;
+    background-color: var(--second-bg);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tile:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px var(--hover-shadow);
+}
+
+@media screen and (max-width: 1360px) {
+    body {
+        padding: 0;
+    }
+}
